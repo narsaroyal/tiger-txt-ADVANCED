@@ -23,14 +23,14 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "6739442523:AAHHA5HZmU6sqI-elmhTs8dwHqfhTizWwnQ",
-             api_id=22609670,
-             api_hash= "3506d8474ad1f4f5e79b7c52a5c3e88d")
+             bot_token= "6847591791:AAHBJeZ_4jDvDHDwllDxs5v0sS2Q5IDiAyw",
+             api_id=26033579,
+             api_hash= "33a934bc26568850ed0eb2c829817090")
 
 
 @bot.on_message(filters.command(["start"]) & filters.user(ADMINS))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"HELLO I AM TXT DOWNLOADER BOT MADE BY TIGER BOSS [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /BOSS")
+    editable = await m.reply_text(f" BOT MADE BY ROYAL [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /ROYAL")
 
 
 @bot.on_message(filters.command("stop") & filters.user(ADMINS))
@@ -39,7 +39,7 @@ async def restart_handler(_, m):
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["BOSS"]) & filters.user(ADMINS))
+@bot.on_message(filters.command(["ROYAL"]) & filters.user(ADMINS))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"**Hey [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nSend txt file**")
     input: Message = await bot.listen(editable.chat.id)
